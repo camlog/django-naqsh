@@ -54,7 +54,6 @@ Features
 * Send emails via Anymail_ (using Mailgun_ by default, but switchable)
 * Media storage using Amazon S3, Google Cloud Storage or Minio_
 * Docker support using docker-compose_ for development and production (using Traefik_ with LetsEncrypt_ support)
-* Procfile_ for deploying to Heroku
 * Run tests with unittest or pytest
 * Customizable PostgreSQL version
 
@@ -70,7 +69,6 @@ Optional Integrations
 
 .. _django-environ: https://github.com/joke2k/django-environ
 .. _12-Factor: http://12factor.net/
-.. _Procfile: https://devcenter.heroku.com/articles/procfile
 .. _Mailgun: http://www.mailgun.com/
 .. _Minio: https://min.io/
 .. _Whitenoise: https://whitenoise.readthedocs.io/
@@ -130,7 +128,6 @@ Answer the prompts with your own desired options_. For example::
     use_sentry [n]: y
     windows [n]: n
     use_docker [n]: n
-    use_heroku [n]: y
     use_compressor [n]: y
     Select postgresql_version:
     1 - 11.5

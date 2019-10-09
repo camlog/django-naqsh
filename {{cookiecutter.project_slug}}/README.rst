@@ -124,16 +124,6 @@ Deployment
 ----------
 
 The following details how to deploy this application.
-{% if cookiecutter.use_heroku.lower() == "y" %}
-
-Heroku
-^^^^^^
-
-See detailed `django-naqsh Heroku documentation`_.
-
-.. _`django-naqsh Heroku documentation`: http://django-naqsh.readthedocs.io/en/latest/deployment-on-heroku.html
-
-{%- endif %}
 {% if cookiecutter.use_docker.lower() == "y" -%}
 
 Docker

@@ -55,18 +55,6 @@ def remove_utility_files():
     shutil.rmtree("utility")
 
 
-def remove_heroku_files():
-    file_names = ["Procfile", "runtime.txt", "requirements.txt"]
-    for file_name in file_names:
-        if (
-            file_name == "requirements.txt"
-            and "{{ cookiecutter.use_travisci }}".lower() == "y"
-        ):
-            # don't remove the file if we are using travisci but not using heroku
-            continue
-        os.remove(file_name)
-
-
 def remove_celery_files():
     file_names = [
         os.path.join("config", "celery.py"),
@@ -298,17 +286,13 @@ def main():
     else:
         remove_docker_files()
 
-    if "{{ cookiecutter.use_heroku }}".lower() == "n":
-        remove_heroku_files()
-
     if (
         "{{ cookiecutter.use_docker }}".lower() == "n"
-        and "{{ cookiecutter.use_heroku }}".lower() == "n"
     ):
         if "{{ cookiecutter.keep_local_envs_in_vcs }}".lower() == "y":
             print(
-                INFO + ".env(s) are only utilized when Docker Compose and/or "
-                "Heroku support is enabled so keeping them does not "
+                INFO + ".env(s) are only utilized when Docker Compose "
+                "support is enabled so keeping them does not "
                 "make sense given your current setup." + TERMINATOR
             )
         remove_envs_and_associated_files()
