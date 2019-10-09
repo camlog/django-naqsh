@@ -25,7 +25,6 @@ DEBUG = env.bool("DJANGO_DEBUG", False)
 # Local time zone. Choices are
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
-# In Windows, this must be set to your system time zone.
 TIME_ZONE = "{{ cookiecutter.timezone }}"
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = "en-us"
@@ -50,7 +49,7 @@ DATABASES = {"default": env.db("DJANGO_DATABASE_URL")}
 {%- else %}
 DATABASES = {
     "default": env.db(
-        var="DJANGO_DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}"
+        var="DJANGO_DATABASE_URL", default="postgres:///{{cookiecutter.project_slug}}"
     )
 }
 {%- endif %}

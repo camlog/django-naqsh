@@ -37,9 +37,6 @@ open_source_license:
 timezone:
     The value to be used for the ``TIME_ZONE`` setting of the project.
 
-windows:
-    Indicates whether the project should be configured for development on Windows.
-
 use_docker:
     Indicates whether the project should be configured to use Docker_ and `Docker Compose`_.
 
