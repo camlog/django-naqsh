@@ -34,7 +34,6 @@
   "use_whitenoise": "n",
   "use_travisci": "n",
   "use_gitlabci": "n",
-  "use_grappelli": "n",
   "use_cors_package": "n",
   "keep_local_envs_in_vcs": "y",
 

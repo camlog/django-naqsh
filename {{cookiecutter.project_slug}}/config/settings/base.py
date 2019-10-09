@@ -65,7 +65,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # APPS
 # ------------------------------------------------------------------------------
-PREREQUISITE_APPS = [{% if cookiecutter.use_grappelli == "y" -%}"grappelli"{%- endif %}]
+PREREQUISITE_APPS = 
 DJANGO_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -297,11 +297,5 @@ REST_FRAMEWORK = {
 # Access Headers
 CORS_ORIGIN_ALLOW_ALL = True
 {% endif %}
-{%- if cookiecutter.use_grappelli == "y" -%}
-# Django Grappelli
-# ------------------------------------------------------------------------------
-GRAPPELLI_ADMIN_TITLE = "{{cookiecutter.project_name}}"
-GRAPPELLI_CLEAN_INPUT_TYPES = False
-{%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------

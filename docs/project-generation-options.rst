@@ -79,9 +79,6 @@ use_travisci:
 use_gitlabci:
     Indicates whether the project should be configured to use `Gitlab CI`_.
 
-use_grappelli:
-    Indicates whether the project should be configured to use `Django Grappelli`_.
-
 use_cors_headers:
     Indicates whether the project should be configured to use `Django CORS Headers`_.
 
@@ -118,8 +115,6 @@ debug:
 .. _Sentry: https://github.com/getsentry/sentry
 
 .. _WhiteNoise: https://github.com/evansd/whitenoise
-
-.. _Django Grappelli: http://grappelliproject.com/
 
 .. _Django CORS Headers: https://github.com/ottoyiu/django-cors-headers
 

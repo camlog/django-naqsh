@@ -37,7 +37,6 @@ def context():
 @pytest.mark.parametrize("use_sentry", YN_CHOICES, ids=lambda yn: f"sentry:{yn}")
 @pytest.mark.parametrize("use_compressor", YN_CHOICES, ids=lambda yn: f"cmpr:{yn}")
 @pytest.mark.parametrize("use_whitenoise", YN_CHOICES, ids=lambda yn: f"wnoise:{yn}")
-@pytest.mark.parametrize("use_grappelli", YN_CHOICES, ids=lambda yn: f"grpplli:{yn}")
 @pytest.mark.parametrize("use_cors_package", YN_CHOICES, ids=lambda yn: f"corsp:{yn}")
 @pytest.mark.parametrize("cloud_provider", CLOUD_CHOICES, ids=lambda yn: f"cloud:{yn}")
 def context_combination(
@@ -48,7 +47,6 @@ def context_combination(
     use_sentry,
     use_compressor,
     use_whitenoise,
-    use_grappelli,
     use_cors_package,
     cloud_provider,
 ):
@@ -61,7 +59,6 @@ def context_combination(
         "use_mailhog": use_mailhog,
         "use_sentry": use_sentry,
         "use_whitenoise": use_whitenoise,
-        "use_grappelli": use_grappelli,
         "use_cors_package": use_cors_package,
         "cloud_provider": cloud_provider,
     }
